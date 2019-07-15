@@ -2,7 +2,7 @@ FROM node:10.16.0-slim
 RUN npm install -g lerna
 
 RUN  apt-get update \
-    && apt-get install python-dev python-pip -y \
+    && apt-get install python-dev python-pip git -y \
     # Install latest chrome dev package, which installs the necessary libs to
     # make the bundled version of Chromium that Puppeteer installs work.
     && apt-get install -y wget --no-install-recommends \
